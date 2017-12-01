@@ -1,4 +1,4 @@
-package inscriptions;
+package app;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

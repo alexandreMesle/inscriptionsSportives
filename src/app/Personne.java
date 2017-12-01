@@ -1,4 +1,4 @@
-package inscriptions;
+package app;
 
 import java.util.Collections;
 import java.util.Set;
