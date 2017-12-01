@@ -10,18 +10,6 @@ import java.util.Collections;
 import java.time.LocalDate;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.Query;
 
 /**
  * Point d'entrée dans l'application, un seul objet de type Inscription
@@ -29,11 +17,8 @@ import org.hibernate.Query;
  * ainsi que d'inscrire des candidats à des compétition.
  */
 
-@Entity
 public class Inscriptions implements Serializable
 {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private static final long serialVersionUID = -3095339436048473524L;
     private static final String FILE_NAME = "Inscriptions.srz";
     private static Inscriptions inscriptions;    
@@ -252,27 +237,4 @@ public class Inscriptions implements Serializable
         return "Candidats : " + getCandidats().toString()
                 + "\nCompetitions  " + getCompetitions().toString();
     }
-    
-//    public static void main(String[] args)
-//    {
-//        Inscriptions inscriptions = Inscriptions.getInscriptions();
-//        Competition flechettes = inscriptions.createCompetition("Mondial de fléchettes", null, false);
-//        Personne tony = inscriptions.createPersonne("Tony", "Dent de plomb", "azerty"),
-//        boris = inscriptions.createPersonne("Boris", "le Hachoir", "ytreza");
-//        flechettes.add(tony);
-//        Equipe lesManouches = inscriptions.createEquipe("Les Manouches");
-//        lesManouches.add(boris);
-//        lesManouches.add(tony);
-//        System.out.println(inscriptions);
-//        lesManouches.delete();
-//        System.out.println(inscriptions);
-//        try
-//        {
-//            inscriptions.sauvegarder();
-//        }
-//        catch (IOException e)
-//        {
-//            System.out.println("Sauvegarde impossible." + e);
-//        }
-//    }
 }

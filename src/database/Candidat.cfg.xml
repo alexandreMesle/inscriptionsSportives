@@ -6,7 +6,7 @@
             org.hibernate.dialect.MySQLDialect
         </property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/hibernate
+            jdbc:mysql://localhost/inscriptions
         </property>
         <property name="hibernate.connection.driver_class">
             com.mysql.jdbc.Driver
