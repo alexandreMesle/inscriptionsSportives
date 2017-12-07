@@ -1,6 +1,7 @@
 package Junit;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
@@ -60,6 +61,14 @@ public class PersonneTest {
 		assertTrue(Personne.getEquipes().contains(Equipe1));
 	}
 	
+	@Test
+	public void testToString() {
+		Inscriptions inscriptions = Inscriptions.getInscriptions();
+		Personne Personne = inscriptions.createPersonne("a", "b", "c");
+		assertNotNull(Personne.toString());
+
+				
+	}
 
 
 	
