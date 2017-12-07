@@ -9,7 +9,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class passerelle {
+public class Passerelle {
 	public static Session session = null;
     private static SessionFactory sessionFactory = null;
     private static final String CONF_FILE = "database/Candidat.cfg.xml";
