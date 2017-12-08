@@ -19,7 +19,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.Query;
 
 /**
- * ReprÃ©sente une personne physique pouvant s'inscrire Ã  une compÃ©tition.
+ * Représente une personne physique pouvant s'inscrire à  une compétition.
  */
 
 @Entity
@@ -31,7 +31,10 @@ public class Personne extends Candidat
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_p")
     private int id_p;
-    private String prenom, mail;
+    @Column(name = "prenom")
+    private String prenom;
+    @Column(name = "mail")
+    private String mail;
     private Set<Equipe> equipes;
     
     Personne(Inscriptions inscriptions, String nom, String prenom, String mail)
