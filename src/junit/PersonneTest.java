@@ -1,4 +1,4 @@
-package Junit;
+package junit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -14,6 +14,7 @@ import app.Inscriptions;
 import app.Personne;
 
 public class PersonneTest {
+	
 	@Test
 	public void testGetPrenom() {
 		Inscriptions inscriptions = Inscriptions.getInscriptions();
@@ -50,7 +51,6 @@ public class PersonneTest {
 	
 	@Test
 	public void testGetEquipes() {
-		
 		Inscriptions inscri = Inscriptions.getInscriptions();
 		Personne Personne = inscri.createPersonne("a", "b", "c");
 		Equipe Equipe = inscri.createEquipe("1");
