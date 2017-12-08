@@ -4,11 +4,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import java.time.LocalDate;
 
 import org.junit.Test;
 
-import app.Competition;
 import app.Equipe;
 import app.Inscriptions;
 import app.Personne;
