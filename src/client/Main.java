@@ -5,6 +5,8 @@
  */
 package client;
 
+import database.Passerelle;
+
 import app.Inscriptions;
 /**
  *
@@ -14,6 +16,7 @@ public class Main {
     public static void main(String[] args){
         Inscriptions inscriptions = Inscriptions.getInscriptions();
         System.out.println(inscriptions);
+        Passerelle.save(inscriptions);
 //        Inscriptions inscriptions = Inscriptions.getInscriptions();
 //        Competition flechettes = inscriptions.createCompetition("Mondial de fléchettes", null, false);
 //        Personne tony = inscriptions.createPersonne("Tony", "Dent de plomb", "azerty"),

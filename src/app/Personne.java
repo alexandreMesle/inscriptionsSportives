@@ -24,7 +24,7 @@ import org.hibernate.Query;
 
 @Entity
 @Table(name = "personne")
-public class Personne extends Candidat
+public class Personne extends Candidat	
 {
     //private static final long serialVersionUID = 4434646724271327254L;
     @Id
