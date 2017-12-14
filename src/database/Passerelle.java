@@ -16,7 +16,7 @@ public class Passerelle {
     
     //Configuration
 
-    static {
+    static{
         try {
             Configuration configuration = new Configuration()
                     .configure(CONF_FILE);
