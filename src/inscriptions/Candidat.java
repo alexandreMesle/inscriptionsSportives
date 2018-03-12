@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Candidat à un �v�nement sportif, soit une personne physique, soit une équipe.
+ * Candidat à un événement sportif, soit une personne physique, soit une équipe.
  *
  */
 
@@ -72,7 +72,7 @@ public abstract class Candidat implements Comparable<Candidat>, Serializable
 	{
 		for (Competition c : competitions)
 			c.remove(this);
-		inscriptions.delete(this);
+		((Set<Competition>) inscriptions).remove(this);
 	}
 	
 	@Override
@@ -85,5 +85,6 @@ public abstract class Candidat implements Comparable<Candidat>, Serializable
 	public String toString()
 	{
 		return "\n" + getNom() + " -> inscrit à " + getCompetitions();
+		
 	}
 }
