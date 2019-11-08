@@ -28,6 +28,7 @@ public class Inscriptions implements Serializable
 
 	private Inscriptions()
 	{
+		
 	}
 	
 	/**

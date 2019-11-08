@@ -2,6 +2,7 @@ package inscriptions;
 
 import java.io.Serializable;
 import java.util.Collections;
+import java.util.Date;
 import java.time.LocalDate;
 import java.util.Set;
 import java.util.TreeSet;
@@ -58,7 +59,8 @@ public class Competition implements Comparable<Competition>, Serializable
 	public boolean inscriptionsOuvertes()
 	{
 		// TODO retourner vrai si et seulement si la date système est antérieure à la date de clôture.
-		return true;
+		LocalDate dateSysteme = LocalDate.now();
+		return dateSysteme.isBefore(dateCloture);
 	}
 	
 	/**
