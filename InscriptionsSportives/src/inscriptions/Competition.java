@@ -116,10 +116,13 @@ public class Competition implements Comparable<Competition>, Serializable
 	public boolean add(Personne personne)
 	{
 		// TODO vérifier que la date de clôture n'est pas passée
+		if(inscriptionsOuvertes()) {
 		if (enEquipe)
 			throw new RuntimeException();
 		personne.add(this);
 		return candidats.add(personne);
+		}
+		return false;
 	}
 
 	/**
