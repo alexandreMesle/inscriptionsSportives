@@ -1,0 +1,12 @@
+EQUIPE: idEquipe, nomEquipe
+S'INSCRIT, 0N EQUIPE, 0N PERSONNE
+PERSONNE: idPersonne, nomPersonne, prenomPersonne, mailPersonne
+
+
+CANDIDATE, 11 EQUIPE, 11 CANDIDAT
+CANDIDAT: idCandidat
+DEVIENS CANDIDAT,  11 PERSONNE, 11 CANDIDAT
+
+PARTICIPE, NN COMPETITIONS, 1N CANDIDAT:dateCloture
+
+COMPETITIONS:idCompetition, nom , date
