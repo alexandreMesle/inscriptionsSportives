@@ -11,10 +11,12 @@ import java.util.TreeSet;
  * 
  */
 
-public class Equipe extends Candidat
+public class Equipe extends Candidat 
 {
 	private static final long serialVersionUID = 4147819927233466035L;
 	private SortedSet<Personne> membres = new TreeSet<>();
+
+	
 	
 	Equipe(Inscriptions inscriptions, String nom)
 	{
@@ -62,7 +64,11 @@ public class Equipe extends Candidat
 	public Set<Personne> getPersonnesAAjouter()
 	{
 		// TODO retourner les personnes que l'on peut ajouter dans cette équipe.
-		return null;
+		SortedSet<Personne> non_membres = new TreeSet<>();
+		for(Personne p : inscriptions.getPersonnes())
+			if(!(getMembres().contains(p)))
+				non_membres.add(p);
+		return Collections.unmodifiableSortedSet(non_membres);
 	}
 	
 	@Override
