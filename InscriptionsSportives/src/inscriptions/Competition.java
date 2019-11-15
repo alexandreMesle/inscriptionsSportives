@@ -122,7 +122,7 @@ public class Competition implements Comparable<Competition>, Serializable
 		personne.add(this);
 		return candidats.add(personne);
 		}
-		return false;
+		throw new RuntimeException();
 	}
 
 	/**
