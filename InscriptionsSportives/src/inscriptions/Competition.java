@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.time.LocalDate;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
@@ -153,7 +154,11 @@ public class Competition implements Comparable<Competition>, Serializable
 	public Set<Candidat> getCandidatsAInscrire()
 	{
 		// TODO les candidats que l'on peut inscrire à cette compétition.
-		return null;
+		SortedSet<Candidat> non_inscrits = new TreeSet<>();
+		for (Candidat c : inscriptions.getCandidats())
+			if (!(getCandidats()).contains(c))
+				non_inscrits.add(c);
+		return Collections.unmodifiableSortedSet(non_inscrits);
 	}
 
 	/**
