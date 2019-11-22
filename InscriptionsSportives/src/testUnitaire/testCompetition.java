@@ -37,7 +37,6 @@ public class testCompetition extends TestCase{
 	@Test
 	public void testSetDateCloture() {
 		Inscriptions inscriptions = Inscriptions.getInscriptions();
-		String nomCompetition = "java";
 		LocalDate date = LocalDate.now();
 		Competition competition = inscriptions.createCompetition("Mondial de fléchettes", date, false);
 		assertEquals(competition.getDateCloture(), date);	
@@ -46,7 +45,6 @@ public class testCompetition extends TestCase{
 	@Test
 	public void testGetDateCloture() {
 		Inscriptions inscriptions = Inscriptions.getInscriptions();
-		String nomCompetition = "java";
 		LocalDate localDate2 = LocalDate.of(2017, Month.MAY, 15);		
 		Competition competition = inscriptions.createCompetition("Mondial de fléchettes", localDate2, false);
 		competition.setDateCloture(localDate2);
