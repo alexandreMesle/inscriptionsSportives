@@ -12,7 +12,7 @@ import inscriptions.Competition;
 import inscriptions.Inscriptions;
 import junit.framework.TestCase;
 
-public class testPremier extends TestCase{
+public class testCompetition extends TestCase{
 
 	@Test
 	public void testSetNomCompetition() {
