@@ -44,7 +44,12 @@ public class TestEquipe {
 
 	@Test
 	public void testRemovePersonne() {
-		fail("Not yet implemented");
+		Inscriptions inscriptions = Inscriptions.getInscriptions();
+		Equipe equipe = inscriptions.createEquipe("java");
+		Personne personne = inscriptions.createPersonne("J", "1", "mail");
+		equipe.add(personne);
+		equipe.remove(personne);
+		assertEquals(!(equipe.getMembres().contains(personne)),true);
 	}
 
 	@Test
