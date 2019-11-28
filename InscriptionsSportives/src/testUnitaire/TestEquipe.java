@@ -35,7 +35,11 @@ public class TestEquipe {
 
 	@Test
 	public void testAddPersonne() {
-		fail("Not yet implemented");
+		Inscriptions inscriptions = Inscriptions.getInscriptions();
+		Equipe equipe = inscriptions.createEquipe("java");
+		Personne personne = inscriptions.createPersonne("Joueur", "Un", "mail");
+		equipe.add(personne);
+		assertEquals(equipe.getMembres().contains(personne),true);
 	}
 
 	@Test
